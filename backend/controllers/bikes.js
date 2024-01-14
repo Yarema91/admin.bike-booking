@@ -8,22 +8,29 @@ const getAll = async (req, res) => {
 };
 
 const add = async (req, res) => {
-  const { id } = req.body;
-  const { error } = schemas.addSchema.validate(req.body);
+  try {
+    const { id } = req.body;
+    const { error } = schemas.addSchema.validate(req.body);
 
-  if (error) {
-    throw httpError(400, error.message);
+    if (error) {
+      throw httpError(400, error.message);
+    }
+    const bike = await Bike.findOne({ id });
+
+    if (bike) {
+      throw httpError(409, "Bike with the same ID already exists");
+    }
+
+    const result = await Bike.create(req.body);
+    res.status(201).json(result);
+
+  } catch (error) {
+    console.error("Error adding bike:", error);
+    res.status(error.status || 500).json({ error: error.message || "Internal Server Error" });
   }
 
-  const bike = await Bike.findOne({ id });
-
-  if (bike) {
-    throw httpError(409, "Bike with the same ID already exists");
-  }
-
-  const result = await Bike.create(req.body);
-  res.status(201).json(result);
 };
+
 
 const deleteById = async (req, res) => {
   const { id } = req.params;

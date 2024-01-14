@@ -1,0 +1,28 @@
+.container {
+  padding: 10px 21.55px 16px 0;
+}
+
+.title {
+  margin-bottom: 5px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28.33px;
+  text-transform: uppercase;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.list li span {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 10px 10px 16px 0;
+  }
+}

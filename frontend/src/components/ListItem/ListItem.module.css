@@ -1,0 +1,88 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 12px 12px 18px;
+  border: 2px solid #6fcf97;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+}
+
+.item.busy {
+  border: 2px solid #f2994a;
+}
+
+.item.unavailable {
+  border: 2px solid rgba(235, 87, 87, 0.5);
+}
+
+.item div:first-child {
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.item div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.item.unavailable div:last-child {
+  opacity: 50%;
+}
+
+.item-name {
+  margin-bottom: 6px;
+}
+
+.item.unavailable .item-name {
+  opacity: 50%;
+}
+
+.item-name span {
+  font-weight: 700;
+}
+
+.item-id {
+  margin-bottom: 6px;
+
+  font-size: 8px;
+  color: #717171;
+}
+
+.item.unavailable .item-id {
+  opacity: 50%;
+}
+
+.item-status select {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+
+  margin-left: 18px;
+
+  color: #000000;
+}
+
+.item-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8px;
+  height: 8px;
+}
+
+.item-button img {
+  width: inherit;
+  height: inherit;
+}
+
+.item-price {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .item-price {
+    font-size: 16px;
+  }
+}
