@@ -37,13 +37,16 @@ Create a '.env' file in the root directory of the backend and set the MongoDB co
 
 DB_HOST=mongodb://your-mongodb-url
 
+
+Test DB = DB_HOST=mongodb+srv://yostrovskyiapi:37P0K87h4cokZoOZ@cluster0.uujysdr.mongodb.net/bikes
+
 or
 
 in backend/server.js:
 
 ### Start the app
 
-in frontend/src/main.js
+
 
 ```shell
 npm run dev
@@ -52,6 +55,12 @@ npm run dev
 ## 4. Frontend React App<a name="frontend-react-app"></a>
 
 Learn how to set up and run the Frontend React App by checking the [Frontend React App](#frontend-react-app) section in the documentation.
+
+Start the app
+
+```shell
+npm run dev
+```
 
 ## 5. Data Validation<a name="data-validation"></a>
 
