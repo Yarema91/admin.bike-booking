@@ -23,6 +23,10 @@ This admin panel enables users to perform the following actions:
 - Remove bicycles.
 - Check statistics on bicycles, including the total number, available, booked, and the average price.
 
+## 1.1 Task description
+
+Task: https://docs.google.com/document/d/1DFJ-HyfnXXKtgs5K8l196h0tiFQ2umeW_jLY51WWV4w/edit?hl=uk
+
 ## 2. Getting Started<a name="getting-started"></a>
 
 To run the application in development mode, follow the instructions in the [Getting Started](#getting-started) section of the documentation.
@@ -31,12 +35,23 @@ To run the application in development mode, follow the instructions in the [Gett
 
 For details on the available API endpoints and their functionalities, refer to the [Backend API](#backend-api) section in the documentation.
 
+# Clone the repository
+
+git clone https://github.com/Yarema91/admin.bike-booking/backend.git
+
+# Navigate to the backend directory
+
+cd backend
+
+# Install dependencies
+
+npm install
+
 Create a '.env' file in the root directory of the backend and set the MongoDB connection URL:
 
-````env
-
+```shell
 DB_HOST=mongodb://your-mongodb-url
-
+```
 
 Test DB = DB_HOST=mongodb+srv://yostrovskyiapi:37P0K87h4cokZoOZ@cluster0.uujysdr.mongodb.net/bikes
 
@@ -44,19 +59,33 @@ or
 
 in backend/server.js:
 
-### Start the app
-
-
+# Start the app
 
 ```shell
 npm run dev
-````
+```
 
 ## 4. Frontend React App<a name="frontend-react-app"></a>
 
 Learn how to set up and run the Frontend React App by checking the [Frontend React App](#frontend-react-app) section in the documentation.
 
-Start the app
+# Clone the repository
+
+git clone https://github.com/Yarema91/admin.bike-booking/tree/master/frontend.git
+
+# Navigate to the frontend directory
+
+```shell
+cd my-vite-redux-app
+```
+
+# Install dependencies
+
+```shell
+npm install
+```
+
+# Start the app
 
 ```shell
 npm run dev
@@ -83,12 +112,8 @@ This project is licensed under the [Your License](LICENSE) - see the [License](#
 Clone the repository:
 
 ```bash
-git clone
-https://github.com/Yarema91/admin.bike-booking.git
-
-
+git clone https://github.com/Yarema91/admin.bike-booking.git
+```
 
 My self-presentation video:
-URL: [comming soon]
-
-```
+URL: [Video](https://drive.google.com/file/d/1qu2RqT2EDSv00H8jfbkB72DES_0LXQvH/view?usp=sharing)
